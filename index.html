@@ -2,9 +2,47 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lilac Valley Farm Stay</title>
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="text/javascript" src="js/js-library.js"></script>
+    <script type="text/javascript" src="js/smoothscroll.js"></script>
+    <script type="text/javascript" src="js/responsivenav.js"></script>
 </head>
 <body>
+
+<header>
+    <img src="assets/images/logos/lilac-valley-logo-black.png" alt="Lilac Valley Farm Stay Logo">
+    <div class='icon'>
+        <a href="javascript:void(0);" id="barsIcon" onclick="addResponsiveClass()">
+            <i class="fa fa-bars"></i>
+        </a>
+        <a href="javascript:void(0);" id="closeIcon" onclick="addResponsiveClass()">
+            <i class="fa fa-close"></i>
+        </a>
+    </div>
+</header>
+
+<nav id="navMenu">
+    <ul>
+        <li><a href="#about" onclick="removeResponsiveClass()">About</a></li>
+        <li><a href="#gallery" onclick="removeResponsiveClass()">Gallery</a></li>
+        <li><a href="#bookings" onclick="removeResponsiveClass()">Bookings</a></li>
+        <li><a href="#contact" onclick="removeResponsiveClass()">Contact</a></li>
+    </ul>
+</nav>
+
+<main>
+    <section id="about"></section>
+    <section id="gallery"></section>
+    <section id="bookings"></section>
+    <section id="contact"></section>
+</main>
+
+<footer>
+
+</footer>
 
 </body>
 </html>
