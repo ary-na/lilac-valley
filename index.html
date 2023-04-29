@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lilac Valley Farm Stay</title>
     <link type="text/css" rel="stylesheet" href="css/style.css">
-    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link type="text/css" rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script type="text/javascript" src="js/js-library.js"></script>
     <script type="text/javascript" src="js/smoothscroll.js"></script>
     <script type="text/javascript" src="js/responsivenav.js"></script>
@@ -13,7 +14,7 @@
 <body>
 
 <header>
-    <img src="assets/images/logos/lilac-valley-logo-black.png" alt="Lilac Valley Farm Stay Logo">
+    <a href="index.html"><img src="assets/images/logos/lilac-valley-logo-black.png" alt="Lilac Valley Farm Stay Logo"></a>
     <div class='icon'>
         <a href="javascript:void(0);" id="barsIcon" onclick="addResponsiveClass()">
             <i class="fa fa-bars"></i>
@@ -34,14 +35,58 @@
 </nav>
 
 <main>
-    <section id="about"></section>
-    <section id="gallery"></section>
-    <section id="bookings"></section>
-    <section id="contact"></section>
+    <section id="about">
+        <img>
+        <h1>Lilac Valley</h1>
+        <span>Farm Stay</span>
+        <p>A rustic farm stay accommodation in the hills of the Blue Mountains</p>
+        <a href="#bookings">Book Now</a>
+    </section>
+
+    <section id="gallery">
+        <h2>gallery</h2>
+    </section>
+
+    <section id="bookings">
+        <article>
+            <h2>Bookings</h2>
+            <p>We're delighted to welcome you to Lilac Valley Farm Stay in the breathtaking Blue Mountains. We invite
+                you to
+                book your stay with us today and make memories that will last a lifetime.</p>
+        </article>
+        <form>
+            <label for="customerName">Name</label>
+            <input type="text" id="customerName" name="customer-name" placeholder="Enter your name" required>
+
+            <label for="customerEmail">Email</label>
+            <input type="email" id="customerEmail" name="customer-email" placeholder="Enter your email" required>
+
+            <label for="customerMobile">Mobile</label>
+            <input type="tel" id="customerMobile" name="customer-mobile" placeholder="Enter your mobile number" required>
+
+            <label for="customerCheckIn">Check-in Date</label>
+            <input type="date" id="customerCheckIn" name="customer-check-in" required>
+
+            <label for="customerStayLength">Length of Stay</label>
+            <input type="number" min="1" max="30" id="customerStayLength" name="customer-stay-length" placeholder="Enter length of stay in days" required>
+
+            <!-- Code sourced and adapted from:
+             https://www.w3schools.com/tags/tag_textarea.asp
+             -->
+            <label for="customerNotes">Notes</label>
+            <textarea id="customerNotes" name="customer-notes" rows="8"></textarea>
+
+            <input type="submit" value="Book">
+        </form>
+    </section>
+
+    <section id="contact">
+        <h2>contact</h2>
+    </section>
 </main>
 
 <footer>
-
+    <p>footer</p>
 </footer>
 
 </body>

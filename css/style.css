@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Vidaloka Regular";
+    src: url("../assets/fonts/Vidaloka-Regular.ttf");
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,39 +10,54 @@
 
 :root {
     --color-black: #000000;
-    --color-white: #FFFFFF;
-    --color-brown: #D4A373;
-    --color-yellow-primary: #FAEDCD;
-    --color-yellow-secondary: #FEFAE0;
-    --color-green-primary: #E9EDC9;
-    --color-green-secondary: #CCD5AE;
+    --color-white-primary: #FFFFFF;
+    --color-white-secondary: #F4F3EE;
+    --color-brown: #463F3A;
+    --color-gray-primary: #8A817C;
+    --color-gray-secondary: #BCB8B1;
+    --color-pink: #E0AFA0;
     --default-padding: 1rem;
     --default-margin: 1rem;
+    --primary-padding: 0.5rem;
+    --primary-margin: 0.5rem;
+    --secondary-padding: 2rem;
+    --secondary-margin: 2rem;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    background-color: var(--color-yellow-secondary);
+    background-color: var(--color-white-primary);
     font-size: 1rem;
+    font-family: Helvetica, sans-serif;
+    font-weight: lighter;
 }
 
 /* ---------------------------------------------------------------
    Navigation Menu
+   Code sourced and adapted from:
+   https://www.w3schools.com/howto/howto_js_mobile_navbar.asp
+   https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_mobile_navbar
    --------------------------------------------------------------- */
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--color-yellow-primary);
+    background-color: var(--color-white-secondary);
 }
 
 header img {
-    width: 70px;
+    width: 10vw;
+    min-width: 65px;
+    max-width: 100px;
     margin: var(--default-margin);
 }
 
 header div.icon {
-    font-size: 2rem;
+    font-size: 150%;
     margin: var(--default-margin);
 }
 
@@ -61,13 +81,108 @@ nav ul {
     list-style: none;
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
-nav ul a {
+nav ul li {
+    margin: 0 var(--default-margin);
+}
+
+/* Code sourced and adapted from:
+ https://stackoverflow.com/questions/39248337/make-anchor-tag-size-to-its-div-content
+ */
+
+nav ul li a {
+    display: inline-block;
     text-decoration: none;
+    color: var(--color-black);
+    font-size: 300%;
+    width: 100%;
+    padding: var(--default-padding) 0;
+}
+
+nav ul li a:hover, nav ul li a:active, nav ul li a:focus {
+    color: var(--color-brown);
 }
 
 nav.responsive {
     display: flex;
-    background-color: var(--color-yellow-primary);
+    background-color: var(--color-white-secondary);
+}
+
+/* ---------------------------------------------------------------
+   Sections
+   --------------------------------------------------------------- */
+
+section {
+    height: 100vh;
+    padding: var(--default-padding);
+}
+
+h2 {
+    font-family: "Vidaloka Regular", serif;
+    font-size: 350%;
+    padding-bottom: var(--default-padding);
+}
+
+/* ---------------------------------------------------------------
+   Bookings Section
+   --------------------------------------------------------------- */
+
+#bookings {
+    background-color: var(--color-white-secondary);
+}
+
+section article {
+    padding-bottom: var(--default-padding);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: var(--default-padding);
+}
+
+form label {
+    padding-bottom: var(--primary-padding);
+}
+
+/* Code sourced and adapted from:
+ https://stackoverflow.com/questions/18085053/scss-css-selector-to-select-all-input-types
+ */
+
+form [type], form textarea {
+    padding: var(--primary-padding);
+    margin-bottom: var(--default-margin);
+    border: 1px var(--color-gray-secondary) solid;
+    border-radius: 4px;
+}
+
+/* Code sourced and adapted from:
+https://stackoverflow.com/questions/16156594/how-to-change-border-color-of-textarea-on-focus
+ */
+
+form [type]:focus, form textarea:focus {
+    outline: none;
+    border: 1px var(--color-pink) solid;
+}
+
+form [type=submit] {
+    cursor: pointer;
+    background-color: var(--color-white-primary);
+    border: 1px var(--color-pink) solid;
+}
+
+form [type=submit]:hover, form [type=submit]:active, form [type=submit]:focus {
+    background-color: var(--color-pink);
+    color: var(--color-white-primary)
+}
+
+/* ---------------------------------------------------------------
+   Footer
+   --------------------------------------------------------------- */
+
+footer {
+    height: 350px;
+    background-color: var(--color-gray-primary);
 }
