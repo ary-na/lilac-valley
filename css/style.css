@@ -1,6 +1,26 @@
 @font-face {
-    font-family: "Vidaloka Regular";
-    src: url("../assets/fonts/Vidaloka-Regular.ttf");
+    font-family: "CormorantGaramond Light";
+    src: url("../assets/fonts/CormorantGaramond-Light.ttf");
+}
+
+@font-face {
+    font-family: "CormorantGaramond Regular";
+    src: url("../assets/fonts/CormorantGaramond-Regular.ttf");
+}
+
+@font-face {
+    font-family: "CormorantGaramond Medium";
+    src: url("../assets/fonts/CormorantGaramond-Medium.ttf");
+}
+
+@font-face {
+    font-family: "CormorantGaramond SemiBold";
+    src: url("../assets/fonts/CormorantGaramond-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: "CormorantGaramond Bold";
+    src: url("../assets/fonts/CormorantGaramond-Bold.ttf");
 }
 
 * {
@@ -10,12 +30,10 @@
 
 :root {
     --color-black: #000000;
-    --color-white-primary: #FFFFFF;
-    --color-white-secondary: #F4F3EE;
-    --color-brown: #463F3A;
-    --color-gray-primary: #8A817C;
-    --color-gray-secondary: #BCB8B1;
-    --color-pink: #E0AFA0;
+    --color-white: #FFFFFF;
+    --color-gray-primary: #F1F2F6;
+    --color-gray-secondary: #D9D9D9;
+    --color-green: #3C6E71;
     --default-padding: 1rem;
     --default-margin: 1rem;
     --primary-padding: 0.5rem;
@@ -29,7 +47,7 @@ html {
 }
 
 body {
-    background-color: var(--color-white-primary);
+    background-color: var(--color-white);
     font-size: 1rem;
     font-family: Helvetica, sans-serif;
     font-weight: lighter;
@@ -46,7 +64,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--color-white-secondary);
+    background-color: var(--color-white);
 }
 
 header img {
@@ -66,7 +84,7 @@ i.fa-bars, i.fa-close {
 }
 
 i.fa-bars:hover, i.fa-close:hover {
-    color: var(--color-brown);
+    color: var(--color-green);
 }
 
 #closeIcon {
@@ -75,6 +93,7 @@ i.fa-bars:hover, i.fa-close:hover {
 
 nav {
     display: none;
+    border-bottom: 0.5px var(--color-green) solid;
 }
 
 nav ul {
@@ -96,32 +115,56 @@ nav ul li a {
     display: inline-block;
     text-decoration: none;
     color: var(--color-black);
-    font-size: 300%;
+    font-size: 400%;
+    font-family: "CormorantGaramond Medium", serif;
     width: 100%;
     padding: var(--default-padding) 0;
 }
 
 nav ul li a:hover, nav ul li a:active, nav ul li a:focus {
-    color: var(--color-brown);
+    color: var(--color-green);
 }
 
 nav.responsive {
     display: flex;
-    background-color: var(--color-white-secondary);
 }
 
 /* ---------------------------------------------------------------
-   Sections
+   Main Sections
    --------------------------------------------------------------- */
 
+#backToTop {
+    display: none;
+}
+
+main div a {
+    position: fixed;
+    top: 90%;
+    left: 78%;
+    font-size: 300%;
+    border-radius: 50px;
+    z-index: 1;
+}
+
+i.fa-arrow-circle-up {
+    color: var(--color-black);
+    opacity: 0.2;
+    transition-duration: 0.5s;
+}
+
+i.fa-arrow-circle-up:hover, i.fa-arrow-circle-up:active, i.fa-arrow-circle-up:focus {
+    color: var(--color-green);
+    opacity: 1;
+}
+
 section {
-    height: 100vh;
+    min-height: 100vh;
     padding: var(--default-padding);
 }
 
 h2 {
-    font-family: "Vidaloka Regular", serif;
-    font-size: 350%;
+    font-family: "CormorantGaramond Medium", serif;
+    font-size: 400%;
     padding-bottom: var(--default-padding);
 }
 
@@ -130,7 +173,7 @@ h2 {
    --------------------------------------------------------------- */
 
 #bookings {
-    background-color: var(--color-white-secondary);
+    background-color: var(--color-gray-primary);
 }
 
 section article {
@@ -140,22 +183,23 @@ section article {
 form {
     display: flex;
     flex-direction: column;
-    padding-bottom: var(--default-padding);
 }
 
 form label {
     padding-bottom: var(--primary-padding);
+    font-size: 85%;
 }
 
 /* Code sourced and adapted from:
  https://stackoverflow.com/questions/18085053/scss-css-selector-to-select-all-input-types
  */
 
-form [type], form textarea {
+form [type=text], form [type=email], form [type=tel], form [type=date], form textarea {
     padding: var(--primary-padding);
     margin-bottom: var(--default-margin);
     border: 1px var(--color-gray-secondary) solid;
     border-radius: 4px;
+    transition-duration: 0.5s;
 }
 
 /* Code sourced and adapted from:
@@ -164,18 +208,23 @@ https://stackoverflow.com/questions/16156594/how-to-change-border-color-of-texta
 
 form [type]:focus, form textarea:focus {
     outline: none;
-    border: 1px var(--color-pink) solid;
+    border: 1px var(--color-green) solid;
 }
 
 form [type=submit] {
     cursor: pointer;
-    background-color: var(--color-white-primary);
-    border: 1px var(--color-pink) solid;
+    background-color: var(--color-white);
+    border: 0.5px var(--color-green) solid;
+    border-radius: 4px;
+    padding: var(--primary-padding);
+    transition-duration: 0.5s;
+    opacity: 0.7;
 }
 
 form [type=submit]:hover, form [type=submit]:active, form [type=submit]:focus {
-    background-color: var(--color-pink);
-    color: var(--color-white-primary)
+    background-color: var(--color-green);
+    color: var(--color-white);
+    opacity: 1;
 }
 
 /* ---------------------------------------------------------------
@@ -184,5 +233,4 @@ form [type=submit]:hover, form [type=submit]:active, form [type=submit]:focus {
 
 footer {
     height: 350px;
-    background-color: var(--color-gray-primary);
 }

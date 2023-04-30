@@ -10,6 +10,7 @@
     <script type="text/javascript" src="js/js-library.js"></script>
     <script type="text/javascript" src="js/smoothscroll.js"></script>
     <script type="text/javascript" src="js/responsivenav.js"></script>
+    <script type="text/javascript" src="js/onscroll.js"></script>
 </head>
 <body>
 
@@ -35,6 +36,12 @@
 </nav>
 
 <main>
+    <div id="backToTop">
+        <a href="#">
+            <i class="fa fa-arrow-circle-up"></i>
+        </a>
+    </div>
+
     <section id="about">
         <img>
         <h1>Lilac Valley</h1>
@@ -44,7 +51,7 @@
     </section>
 
     <section id="gallery">
-        <h2>gallery</h2>
+        <h2>Gallery</h2>
     </section>
 
     <section id="bookings">
@@ -62,26 +69,24 @@
             <input type="email" id="customerEmail" name="customer-email" placeholder="Enter your email" required>
 
             <label for="customerMobile">Mobile</label>
-            <input type="tel" id="customerMobile" name="customer-mobile" placeholder="Enter your mobile number" required>
+            <input type="tel" id="customerMobile" name="customer-mobile" placeholder="Enter your mobile number"
+                   required>
 
             <label for="customerCheckIn">Check-in Date</label>
             <input type="date" id="customerCheckIn" name="customer-check-in" required>
-
-            <label for="customerStayLength">Length of Stay</label>
-            <input type="number" min="1" max="30" id="customerStayLength" name="customer-stay-length" placeholder="Enter length of stay in days" required>
 
             <!-- Code sourced and adapted from:
              https://www.w3schools.com/tags/tag_textarea.asp
              -->
             <label for="customerNotes">Notes</label>
-            <textarea id="customerNotes" name="customer-notes" rows="8"></textarea>
+            <textarea id="customerNotes" name="customer-notes" rows="4"></textarea>
 
             <input type="submit" value="Book">
         </form>
     </section>
 
     <section id="contact">
-        <h2>contact</h2>
+        <h2>Contact</h2>
     </section>
 </main>
 
