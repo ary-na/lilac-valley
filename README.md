@@ -5,3 +5,13 @@
 For more information visit [Academic Integrity at Curtin](https://www.curtin.edu.au/students/essentials/rights/academic-integrity/)
 
 This repository is for a fictitious website showcasing a rustic farm stay accommodation.
+
+### Bibliography
+
+https://fonts.google.com/?preview.text=Bookings&preview.text_type=custom&category=Serif
+
+https://dribbble.com
+
+https://unsplash.com
+
+https://coolors.co/palettes/popular/3c6e71
