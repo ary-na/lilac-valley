@@ -48,7 +48,14 @@
 
     nav ul li a {
         font-size: 100%;
-        font-weight: 400;
+        transition: .6s;
+        opacity: .4;
+    }
+
+    nav ul li a:hover, nav ul li a:active, nav ul li a:focus {
+        color: var(--color-orange);
+        opacity: 1;
+        transform: scale(1.8) translateX(21%);
     }
 
     /* ---------------------------------------------------------------
@@ -61,6 +68,10 @@
 
     .main {
         flex: 1;
+    }
+
+    h2 {
+        display: none;
     }
 
     section {
@@ -88,23 +99,39 @@
     /* ---------------------------------------------------------------
    About Section
    --------------------------------------------------------------- */
+
     #about img {
         position: absolute;
         order: 1;
-        z-index: -1;
         align-self: center;
-        border-radius: 100%;
-        width: 50vw;
-        height: 50vh;
+        left: 50.1%;
+        bottom: 30%;
+        width: 40vw;
+        height: 60vh;
+        opacity: .4;
+        transition: 1s;
+        z-index: 3;
     }
 
-    h1 {
-        font-size: 10vw;
-        text-align: left;
+    #about img:hover {
+        opacity: 1;
+        transform: scale(1.1) translateY(2%) translateX(-20%);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
 
     #about article {
-        align-self: flex-end;
+        text-align: left;
+        align-items: flex-start;
+    }
+
+    #about article p {
+        padding-left: 0;
+        font-size: 1.4vw;
+        font-weight: 400;
+    }
+
+    #about span {
+        font-size: 4vw;
     }
 
 
@@ -137,6 +164,11 @@
     /* ---------------------------------------------------------------
     Booking Section
     --------------------------------------------------------------- */
+
+    #booking {
+        background-color: whitesmoke;
+    }
+
 
     #booking div {
         flex-direction: column;

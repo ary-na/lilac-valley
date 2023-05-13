@@ -23,12 +23,12 @@
     src: url("../assets/fonts/CormorantGaramond-Bold.ttf");
 }
 
-@keyframes gallery-img {
+@keyframes button {
     from {
-        transform: scale(1);
+        transform: scale(1) translateY(0) translateX(0);
     }
     to {
-        transform: scale(1.4);
+        transform: scale(1.1) translateY(15%) translateX(5%);
     }
 
 }
@@ -198,10 +198,6 @@ h1 {
     font-size: 12vw;
 }
 
-h2 {
-    display: none;
-}
-
 h3 {
     padding: var(--default-padding) 0;
     font-weight: 400;
@@ -245,23 +241,27 @@ https://www.w3schools.com/csS/css3_object-fit.asp
 }
 
 .button {
+    color: black;
     width: 150px;
+    font-weight: 200;
     text-align: center;
     text-decoration: none;
-    cursor: pointer;
     background-color: white;
-    border: 0.5px var(--color-gray-secondary) solid;
+    cursor: pointer;
+    border: 1px var(--color-orange) solid;
     border-radius: 4px;
     padding: var(--primary-padding);
     margin-bottom: var(--default-margin);
-    transition-duration: 0.5s;
-    opacity: 0.7;
+    transition-duration: 0.7s;
+    opacity: .7;
 }
 
 .button:hover, .button:active, .button:focus {
-    background-color: var(--color-yellow);
-    border: 0.5px var(--color-yellow) solid;
+    color: white;
+    background-color: var(--color-orange);
+    border: 1px var(--color-orange) solid;
     opacity: 1;
+    animation: button 2s infinite alternate;
 }
 
 /* ---------------------------------------------------------------
@@ -275,19 +275,16 @@ https://www.w3schools.com/csS/css3_object-fit.asp
 
 .gallery div img {
     height: 350px;
-    opacity: .6;
     width: 100%;
-    border: 0.5px white solid;
     object-fit: cover;
     transition: 1s;
 }
 
 .gallery div img:hover {
-    opacity: 1;
-    border: 0.5px var(--color-gray-secondary) solid;
-    transform: scale(1.09);
+    transform: scale(1.08);
     position: relative;
     z-index: 200;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .corner-img {
@@ -349,16 +346,19 @@ form [type]:focus, form textarea:focus {
 form [type=submit] {
     cursor: pointer;
     background-color: white;
-    border: 0.5px var(--color-gray-secondary) solid;
+    border: 1px var(--color-orange) solid;
     border-radius: 4px;
     padding: var(--primary-padding) 6rem;
     transition-duration: 0.5s;
     margin: var(--default-margin) 0;
+    opacity: .7;
 }
 
 form [type=submit]:hover, form [type=submit]:active, form [type=submit]:focus {
-    background-color: var(--color-yellow);
-    border: 0.5px var(--color-yellow) solid;
+    color: white;
+    background-color: var(--color-orange);
+    border: 1px var(--color-orange) solid;
+    opacity: 1;
 }
 
 /* ---------------------------------------------------------------
@@ -369,8 +369,6 @@ form [type=submit]:hover, form [type=submit]:active, form [type=submit]:focus {
     width: 100%;
     max-height: 1000px;
     min-height: 500px;
-    border: 0.5px var(--color-blue) solid;
-    border-radius: 4px;
 }
 
 .contact-details {
@@ -396,6 +394,7 @@ form [type=submit]:hover, form [type=submit]:active, form [type=submit]:focus {
    --------------------------------------------------------------- */
 
 footer {
+    color: white;
     position: relative;
     display: flex;
     padding: var(--default-padding);
@@ -403,6 +402,7 @@ footer {
     align-items: center;
     justify-content: space-between;
     z-index: 100;
+    background-color: var(--color-orange);
 }
 
 footer img {
