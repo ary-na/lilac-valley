@@ -64,12 +64,11 @@
     }
 
     section {
-        min-height: 80vh;
+        min-height: 70vh;
         display: flex;
         align-content: center;
         justify-content: center;
         gap: 50px;
-        padding-right: 0;
     }
 
     .flex {
@@ -117,13 +116,21 @@
     https://www.w3schools.com/css/css_grid.asp
      */
 
+    #gallery {
+        padding-right: 0;
+    }
+
     .gallery {
-        grid-template-columns: auto auto auto;
+        grid-template-columns: auto auto auto auto;
+        align-content: center;
         justify-content: center;
+        width: 100%;
+        max-width: 900px;
+        margin-left: auto;
     }
 
     .gallery div img {
-        height: 150px;
+        height: 220px;
         width: 100%;
     }
 

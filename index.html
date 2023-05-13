@@ -7,8 +7,7 @@
     <link type="text/css" rel="stylesheet" href="css/style.css">
     <link type="text/css" rel="stylesheet" href="css/tablet.css">
     <link type="text/css" rel="stylesheet" href="css/desktop.css">
-    <link type="text/css" rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script type="text/javascript" src="js/js-library.js"></script>
     <script type="text/javascript" src="js/smoothscroll.js"></script>
     <script type="text/javascript" src="js/responsivenav.js"></script>
@@ -73,32 +72,38 @@
                 <h2>Gallery</h2>
                 <div class="gallery">
                     <div>
-                        <img src="assets/images/gallery/ray-aucott-xB0e8bDV4ww-unsplash.jpg"
+                        <img src="assets/images/gallery/2.png"
                              alt="Image of goat named Rosie">
                     </div>
 
                     <div>
-                        <img src="assets/images/gallery/megan-thomas-xMh_ww8HN_Q-unsplash.jpg"
+                        <img src="assets/images/gallery/3.png"
                              alt="Image of goat named Rosie">
                     </div>
 
                     <div>
-                        <img src="assets/images/gallery/judith-prins-AJa7S1fjy-I-unsplash.jpg"
+                        <img src="assets/images/gallery/4.png"
                              alt="Image of goat named Rosie">
                     </div>
 
                     <div>
-                        <img src="assets/images/gallery/annie-spratt-Q2QhOxN5enk-unsplash.jpg"
+                        <img class="corner-img" src="assets/images/gallery/5.png"
                              alt="Image of goat named Rosie">
                     </div>
-
                     <div>
-                        <img src="assets/images/gallery/kenny-eliason-iAftdIcgpFc-unsplash.jpg"
+                        <img src="assets/images/gallery/7.png"
                              alt="Image of goat named Rosie">
                     </div>
-
                     <div>
-                        <img src="assets/images/gallery/brooke-cagle-EenUxvVltMs-unsplash.jpg"
+                        <img src="assets/images/gallery/8.png"
+                             alt="Image of goat named Rosie">
+                    </div>
+                    <div>
+                        <img src="assets/images/gallery/9.png"
+                             alt="Image of goat named Rosie">
+                    </div>
+                    <div>
+                        <img class="corner-img" src="assets/images/gallery/10.png"
                              alt="Image of goat named Rosie">
                     </div>
                 </div>
@@ -206,10 +211,10 @@
 
 <script>
     (g => {
-        var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__",
+        let h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__",
             m = document, b = window;
         b = b[c] || (b[c] = {});
-        var d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams,
+        let d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams,
             u = () => h || (h = new Promise(async (f, n) => {
                 await (a = m.createElement("script"));
                 e.set("libraries", [...r] + "");
