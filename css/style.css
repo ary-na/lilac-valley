@@ -29,11 +29,13 @@
 }
 
 :root {
-    --color-black: #000000;
-    --color-white: #FFFFFF;
+    --color-yellow: #F2CC8F;
+    --color-green: #81B29A;
+    --color-blue: #3D405B;
+    --color-orange: #E07A5F;
     --color-gray-primary: #F1F2F6;
     --color-gray-secondary: #D9D9D9;
-    --color-green: #3C6E71;
+
     --default-padding: 1rem;
     --default-margin: 1rem;
     --primary-padding: 0.5rem;
@@ -47,7 +49,6 @@ html {
 }
 
 body {
-    background-color: var(--color-white);
     font-size: 1rem;
     font-family: Helvetica, sans-serif;
     font-weight: lighter;
@@ -62,9 +63,14 @@ body {
 
 header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    background-color: var(--color-white);
+    justify-content: space-between;
+}
+
+.empty {
+    font-size: 150%;
+    margin: var(--default-margin);
+    visibility: hidden;
 }
 
 header img {
@@ -80,11 +86,11 @@ header div.icon {
 }
 
 i.fa-bars, i.fa-close {
-    color: var(--color-black);
+    color: black;
 }
 
 i.fa-bars:hover, i.fa-close:hover {
-    color: var(--color-green);
+    color: var(--color-yellow);
 }
 
 #closeIcon {
@@ -92,12 +98,22 @@ i.fa-bars:hover, i.fa-close:hover {
 }
 
 nav {
+    position: absolute;
+    width: 100%;
     display: none;
-    border-bottom: 0.5px var(--color-green) solid;
+    border-bottom: 0.5px var(--color-yellow) solid;
+    background-color: white;
+}
+
+#logo {
+    display: none;
+}
+
+ul {
+    list-style: none;
 }
 
 nav ul {
-    list-style: none;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -107,6 +123,10 @@ nav ul li {
     margin: 0 var(--default-margin);
 }
 
+nav span {
+    display: none;
+}
+
 /* Code sourced and adapted from:
  https://stackoverflow.com/questions/39248337/make-anchor-tag-size-to-its-div-content
  */
@@ -114,15 +134,14 @@ nav ul li {
 nav ul li a {
     display: inline-block;
     text-decoration: none;
-    color: var(--color-black);
+    color: black;
     font-size: 400%;
-    font-family: "CormorantGaramond Medium", serif;
     width: 100%;
     padding: var(--default-padding) 0;
 }
 
 nav ul li a:hover, nav ul li a:active, nav ul li a:focus {
-    color: var(--color-green);
+    color: var(--color-yellow);
 }
 
 nav.responsive {
@@ -137,42 +156,126 @@ nav.responsive {
     display: none;
 }
 
-main div a {
+#backToTop a {
     position: fixed;
-    top: 90%;
-    left: 78%;
+    top: 90vh;
+    left: 80vw;
     font-size: 300%;
     border-radius: 50px;
     z-index: 1;
 }
 
+main img {
+    margin-bottom: var(--default-margin);
+}
+
 i.fa-arrow-circle-up {
-    color: var(--color-black);
-    opacity: 0.2;
+    color: var(--color-gray-secondary);
+    opacity: 0.5;
     transition-duration: 0.5s;
 }
 
 i.fa-arrow-circle-up:hover, i.fa-arrow-circle-up:active, i.fa-arrow-circle-up:focus {
-    color: var(--color-green);
+    color: var(--color-yellow);
     opacity: 1;
 }
 
 section {
-    min-height: 100vh;
     padding: var(--default-padding);
 }
 
+h1 {
+    font-size: 12vw;
+}
+
 h2 {
-    font-family: "CormorantGaramond Medium", serif;
-    font-size: 400%;
-    padding-bottom: var(--default-padding);
+    display: none;
+}
+
+h3 {
+    padding: var(--default-padding) 0;
+    font-weight: 400;
+}
+
+p {
+    line-height: 2;
 }
 
 /* ---------------------------------------------------------------
-   Bookings Section
+   About Section
    --------------------------------------------------------------- */
 
-#bookings {
+#about {
+    padding: 0;
+}
+
+/* Code sourced and adapted from:
+https://www.w3schools.com/csS/css3_object-fit.asp
+ */
+
+#about img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+#about article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#about article h1 {
+    padding-top: var(--default-padding);
+}
+
+#about article p {
+    padding: var(--default-padding);
+}
+
+.button {
+    width: 150px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: white;
+    border: 0.5px var(--color-gray-secondary) solid;
+    border-radius: 4px;
+    padding: var(--primary-padding);
+    margin-bottom: var(--default-margin);
+    transition-duration: 0.5s;
+    opacity: 0.7;
+}
+
+.button:hover, .button:active, .button:focus {
+    background-color: var(--color-yellow);
+    border: 0.5px var(--color-yellow) solid;
+    opacity: 1;
+}
+
+/* ---------------------------------------------------------------
+   Gallery Section
+   --------------------------------------------------------------- */
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+}
+
+.gallery div img {
+    height: 350px;
+    width: 100%;
+    border: 0.5px var(--color-gray-secondary) solid;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+/* ---------------------------------------------------------------
+   Booking Section
+   --------------------------------------------------------------- */
+
+#booking {
     background-color: var(--color-gray-primary);
 }
 
@@ -185,16 +288,25 @@ form {
     flex-direction: column;
 }
 
-form label {
+form fieldset {
+    display: flex;
+    flex-direction: column;
+}
+
+form fieldset label {
     padding-bottom: var(--primary-padding);
     font-size: 85%;
+}
+
+fieldset {
+    border-width: 0;
 }
 
 /* Code sourced and adapted from:
  https://stackoverflow.com/questions/18085053/scss-css-selector-to-select-all-input-types
  */
 
-form [type=text], form [type=email], form [type=tel], form [type=date], form textarea {
+form fieldset [type=text], form fieldset [type=email], form fieldset [type=tel], form fieldset [type=date], form fieldset textarea {
     padding: var(--primary-padding);
     margin-bottom: var(--default-margin);
     border: 1px var(--color-gray-secondary) solid;
@@ -208,23 +320,52 @@ https://stackoverflow.com/questions/16156594/how-to-change-border-color-of-texta
 
 form [type]:focus, form textarea:focus {
     outline: none;
-    border: 1px var(--color-green) solid;
+    border: 1px var(--color-yellow) solid;
 }
 
 form [type=submit] {
     cursor: pointer;
-    background-color: var(--color-white);
-    border: 0.5px var(--color-green) solid;
+    background-color: white;
+    border: 0.5px var(--color-gray-secondary) solid;
     border-radius: 4px;
-    padding: var(--primary-padding);
+    padding: var(--primary-padding) 6rem;
     transition-duration: 0.5s;
-    opacity: 0.7;
+    margin: var(--default-margin) 0;
 }
 
 form [type=submit]:hover, form [type=submit]:active, form [type=submit]:focus {
-    background-color: var(--color-green);
-    color: var(--color-white);
-    opacity: 1;
+    background-color: var(--color-yellow);
+    border: 0.5px var(--color-yellow) solid;
+}
+
+/* ---------------------------------------------------------------
+   Contact Section
+   --------------------------------------------------------------- */
+
+#map {
+    width: 100%;
+    max-height: 1000px;
+    min-height: 500px;
+    border: 0.5px var(--color-blue) solid;
+    border-radius: 4px;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: flex-start;
+    gap: 20px;
+    margin-top: var(--default-margin);
+}
+
+.contact-details a {
+    text-decoration: none;
+    color: black;
+}
+
+.contact-details a:hover, .contact-details a:active, .contact-details a:focus {
+    color: var(--color-yellow);
 }
 
 /* ---------------------------------------------------------------
@@ -232,5 +373,21 @@ form [type=submit]:hover, form [type=submit]:active, form [type=submit]:focus {
    --------------------------------------------------------------- */
 
 footer {
-    height: 350px;
+    position: relative;
+    display: flex;
+    padding: var(--default-padding);
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+footer img {
+    width: 90px;
+    margin: var(--default-margin);
+
+}
+
+footer span {
+    font-size: 0.5rem;
 }
