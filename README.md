@@ -6,9 +6,14 @@ For more information visit [Academic Integrity at Curtin](https://www.curtin.edu
 
 This repository is for a fictitious website showcasing a rustic farm stay accommodation.
 
-## Screenshot
+## Link
+
+- [Website](https://inquisitive-conkies-fd473b.netlify.app)
+
+## Screenshots
 
 ![Home Page](screenshots/lilac-valley-farm-stay-website.png)
+![Home Page Dark Mode](screenshots/lilac-valley-farm-stay-website-dark.png)
 
 ### References
 
