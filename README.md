@@ -12,7 +12,12 @@ This repository is for a fictitious website showcasing a rustic farm stay accomm
 
 ## Screenshots
 
+### Home Page
+
 ![Home Page](screenshots/lilac-valley-farm-stay-website.png)
+
+### Home Page - Dark Mode
+
 ![Home Page Dark Mode](screenshots/lilac-valley-farm-stay-website-dark.png)
 
 ### References
