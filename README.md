@@ -6,14 +6,40 @@ For more information visit [Academic Integrity at Curtin](https://www.curtin.edu
 
 This repository is for a fictitious website showcasing a rustic farm stay accommodation.
 
+## Screenshot
+
+![Home Page](screenshots/Screenshot%202023-05-14%20at%2023-44-46%20Lilac%20Valley%20Farm%20Stay.png)
+
+### References
+
+### Images
+
+Gold, Dan. 2016. “Tomatoes Hanging on Tomato Plant.” Unsplash.com. Unsplash. August 14, 2016. https://unsplash.com/photos/4LiUI-Y2mI8.
+
+Unsplash. n.d. “Photo by Annie Spratt on Unsplash.” Unsplash.com. Accessed May 14, 2023. https://unsplash.com/photos/uSqsYy-PIaM.
+
+Unsplash. n.d. “Photo by Autumn Mott Rodeheaver on Unsplash.” Unsplash.com. https://unsplash.com/photos/YLyxXawZm4w.
+
+Unsplash. n.d. “Photo by Brandon Mowinkel on Unsplash.” Unsplash.com. Accessed May 14, 2023. https://unsplash.com/photos/idw6R3T49uU.
+
+Unsplash. n.d. “Photo by Courtney Coles on Unsplash.” Unsplash.com. Accessed May 14, 2023. https://unsplash.com/photos/h17jE3A2k5E.
+
+Unsplash. n.d. “Photo by - - on Unsplash.” Unsplash.com. Accessed May 14, 2023. https://unsplash.com/photos/zENZO_qhpYQ.
+
+Unsplash. n.d. “Photo by Intrapixel on Unsplash.” Unsplash.com. Accessed May 14, 2023. https://unsplash.com/photos/et7WYSz8vec.
+
+Unsplash. n.d. “Photo by Lucas Vidart on Unsplash.” Unsplash.com. Accessed May 14, 2023. https://unsplash.com/photos/i-juS6HUX5o.
+
+Unsplash. n.d. “Photo by Timothy Eberly on Unsplash.” Unsplash.com. Accessed May 14, 2023. https://unsplash.com/photos/UFLjsoyrKJc.
+
 ### Bibliography
 
-https://fonts.google.com/?preview.text=Bookings&preview.text_type=custom&category=Serif
+“Color Palettes - Coolors.” n.d. Coolors.co. Accessed May 14, 2023. https://coolors.co/palettes/popular/3c6e71.
 
-https://dribbble.com
+“Dribbble - Discover the World’s Top Designers & Creative Professionals.” n.d. Dribbble.com. https://dribbble.com.
 
-https://unsplash.com
+“Google Fonts.” n.d. Google Fonts. Accessed May 14, 2023. https://fonts.google.com/?preview.text=Bookings&preview.text_type=custom&category=Serif.
 
-https://coolors.co/palettes/popular/3c6e71
+Pinterest. 2019. “Pinterest (Australia).” Pinterest. Pinterest. 2019. https://www.pinterest.com.au.
 
-https://www.pinterest.com.au
+Unsplash. 2019. “Beautiful Free Images & Pictures | Unsplash.” Unsplash.com. Unsplash. 2019. https://unsplash.com.
