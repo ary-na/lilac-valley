@@ -83,6 +83,14 @@ header {
     visibility: hidden;
 }
 
+.hidden {
+    display: none;
+}
+
+.display-none {
+    display: none;
+}
+
 header img {
     width: 10vw;
     min-width: 65px;
@@ -100,7 +108,7 @@ i.fa-bars, i.fa-close {
 }
 
 i.fa-bars:hover, i.fa-close:hover {
-    color: var(--color-yellow);
+    color: var(--color-orange);
 }
 
 #closeIcon {
@@ -111,8 +119,9 @@ nav {
     position: absolute;
     width: 100%;
     display: none;
-    border-bottom: 0.5px var(--color-yellow) solid;
+    border-bottom: 5px var(--color-orange) solid;
     background-color: white;
+
 }
 
 #logo {
@@ -145,13 +154,13 @@ nav ul li a {
     display: inline-block;
     text-decoration: none;
     color: black;
-    font-size: 400%;
+    font-size: 300%;
     width: 100%;
     padding: var(--default-padding) 0;
 }
 
 nav ul li a:hover, nav ul li a:active, nav ul li a:focus {
-    color: var(--color-yellow);
+    color: var(--color-orange);
 }
 
 nav.responsive {
@@ -186,7 +195,7 @@ i.fa-arrow-circle-up {
 }
 
 i.fa-arrow-circle-up:hover, i.fa-arrow-circle-up:active, i.fa-arrow-circle-up:focus {
-    color: var(--color-yellow);
+    color: var(--color-orange);
     opacity: 1;
 }
 
@@ -196,6 +205,11 @@ section {
 
 h1 {
     font-size: 12vw;
+}
+
+h2 {
+    font-size: 8vw;
+    padding: var(--default-padding) 0;
 }
 
 h3 {
@@ -221,23 +235,32 @@ https://www.w3schools.com/csS/css3_object-fit.asp
 
 #about img {
     width: 100%;
-    height: 280px;
+    height: 300px;
     object-fit: cover;
 }
 
 #about article {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    text-align: left;
+    align-items: flex-start;
 }
 
 #about article h1 {
     padding-top: var(--default-padding);
+    padding-left: var(--default-padding);
 }
 
 #about article p {
     padding: var(--default-padding);
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+#about span {
+    font-size: 3vw;
+    padding: 0 var(--default-padding);
 }
 
 .button {
@@ -252,6 +275,7 @@ https://www.w3schools.com/csS/css3_object-fit.asp
     border-radius: 4px;
     padding: var(--primary-padding);
     margin-bottom: var(--default-margin);
+    margin-left: var(--default-margin);
     transition-duration: 0.7s;
     opacity: .7;
 }
@@ -278,17 +302,6 @@ https://www.w3schools.com/csS/css3_object-fit.asp
     width: 100%;
     object-fit: cover;
     transition: 1s;
-}
-
-.gallery div img:hover {
-    transform: scale(1.08);
-    position: relative;
-    z-index: 200;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.corner-img {
-    border-right-width: 0 !important;
 }
 
 /* ---------------------------------------------------------------
@@ -365,10 +378,22 @@ form [type=submit]:hover, form [type=submit]:active, form [type=submit]:focus {
    Contact Section
    --------------------------------------------------------------- */
 
+#contact div {
+    display: flex;
+    flex-direction: column;
+}
+
 #map {
     width: 100%;
     max-height: 1000px;
     min-height: 500px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    order: 1;
+    margin-bottom: var(--default-margin);
+}
+
+#contact article {
+    order: 2;
 }
 
 .contact-details {
@@ -386,7 +411,7 @@ form [type=submit]:hover, form [type=submit]:active, form [type=submit]:focus {
 }
 
 .contact-details a:hover, .contact-details a:active, .contact-details a:focus {
-    color: var(--color-yellow);
+    color: var(--color-orange);
 }
 
 /* ---------------------------------------------------------------

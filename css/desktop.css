@@ -35,13 +35,17 @@
     }
 
     .hidden {
+        display: block;
         visibility: hidden;
+    }
+
+    .display-none {
+        display: block;
     }
 
     /* Code sourced and adapted from:
     https://stackoverflow.com/questions/44446671/my-position-sticky-element-isnt-sticky-when-using-flexbox
      */
-
     nav ul {
         align-self: flex-start;
     }
@@ -61,13 +65,15 @@
     /* ---------------------------------------------------------------
     Main Section
     --------------------------------------------------------------- */
-
     /* Code sourced and adapted from:
     https://stackoverflow.com/questions/37745051/fill-the-remaining-height-or-width-in-a-flex-container
      */
-
     .main {
         flex: 1;
+    }
+
+    h1 {
+        font-size: 11rem;
     }
 
     h2 {
@@ -99,7 +105,6 @@
     /* ---------------------------------------------------------------
    About Section
    --------------------------------------------------------------- */
-
     #about img {
         position: absolute;
         order: 1;
@@ -119,30 +124,29 @@
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
 
-    #about article {
-        text-align: left;
-        align-items: flex-start;
+    #about article h1 {
+        padding: 0;
     }
 
     #about article p {
         padding-left: 0;
-        font-size: 1.4vw;
-        font-weight: 400;
     }
 
     #about span {
-        font-size: 4vw;
+        padding: 0;
+    }
+
+    .button {
+        margin-left: 0;
     }
 
 
     /* ---------------------------------------------------------------
     Gallery Section
     --------------------------------------------------------------- */
-
     /* Code  sourced and adapted from:
     https://www.w3schools.com/css/css_grid.asp
      */
-
     #gallery {
         padding-right: 0;
     }
@@ -161,10 +165,23 @@
         width: 100%;
     }
 
+    /* Code sourced and adapted from:
+    https://www.w3schools.com/css/css3_shadows_box.asp
+    */
+    .gallery div img:hover {
+        transform: scale(1.08);
+        position: relative;
+        z-index: 200;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .corner-img {
+        border-right-width: 0 !important;
+    }
+
     /* ---------------------------------------------------------------
     Booking Section
     --------------------------------------------------------------- */
-
     #booking {
         background-color: whitesmoke;
     }
@@ -195,27 +212,31 @@
     }
 
 
-
     /* ---------------------------------------------------------------
     Contact Section
     --------------------------------------------------------------- */
-
     /* Code sourced and adapted from:
     https://stackoverflow.com/questions/29503227/how-to-make-flexbox-items-the-same-size
     */
-
     #contact {
         flex-direction: column;
+    }
+
+    #contact > div {
+        flex-direction: row;
     }
 
     #contact div article {
         align-self: center;
         flex: 1 1 0;
+        order: 1;
     }
 
     #map {
         align-self: center;
         flex: 1 1 0;
+        order: 2;
+        margin-bottom: 0;
     }
 
     /* ---------------------------------------------------------------
